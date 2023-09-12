@@ -1,0 +1,534 @@
+
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  color: #e9cc69;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+#tm-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/pop-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+#tm-bg:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#tm-wrap {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-height: 100vh;
+}
+
+p {
+  line-height: 1.9;
+  letter-spacing: 1px;
+}
+
+.tm-main-content {
+  display: flex;
+  align-items: center;
+  padding: 50px 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+.tm-site-header-col {
+  display: flex;
+  align-items: center;
+}
+
+.tm-site-header {
+  margin: 10px;
+  text-align: right;
+  width: 100%;
+}
+
+.tm-nav ul {
+  padding-left: 0;
+  display: block;
+}
+
+.tm-nav li {
+  list-style: none;
+  display: inline-block;
+  border: 1px #e9cc69;
+  float: left;
+  margin: 10px;
+}
+
+.tm-nav-link {
+  color: #e9cc69;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 165px;
+  height: 165px;
+  text-align: center;
+  border: 1px solid white;
+  cursor: pointer;
+  position: relative;
+}
+
+.tm-nav-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+}
+
+.fa-3x {
+  font-size: 2.5em;
+}
+
+.product {
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.product:hover {
+  background: #2c2a35;
+  color: #a9a9a9;
+}
+
+.tm-nav-icon {
+  display: block;
+  margin-bottom: 25px;
+}
+
+/* Expanding Grid Items from Codrops */
+.tm-page-title {
+  font-weight: 300;
+}
+.content {
+  max-width: 370px;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid__item {
+  margin: 10px;
+}
+.product {
+  position: relative;
+  cursor: pointer;
+}
+
+.product__bg {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+}
+
+.product__bg,
+.product__description {
+  opacity: 0;
+  position: absolute;
+}
+
+.product__description {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.tm-fa-close {
+  font-size: 30px;
+}
+
+.details {
+  font-size: 1rem;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+  padding: 15px;
+  display: none;
+}
+
+.details > * {
+  position: relative;
+  opacity: 0;
+}
+
+.details--open {
+  pointer-events: auto;
+}
+
+.details__bg {
+  width: 100%;
+  max-width: 900px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details__bg--down {
+  background: #2c2a35;
+}
+
+.details__bg {
+  padding: 50px;
+  transform-origin: 0 0;
+}
+
+.details__close {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  border: 0;
+  background: none;
+  margin: 1em;
+  cursor: pointer;
+  font-size: 0.85em;
+  color: #e9cc69;
+  z-index: 1001;
+}
+
+/* Team */
+.tm-reverse-sm {
+  flex-direction: row;
+}
+
+/* Our Work */
+.tm-slider-img-link {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.slick-dots li button:before {
+  font-size: 20px;
+  color: #e9cc69;
+  opacity: 1;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -40px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: deepskyblue;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+
+/* Contact */
+.form-control {
+  font-size: 1.1rem;
+  border-radius: 0;
+  border: none;
+  background-color: #353541;
+  color: #e9cc69;
+  padding: 0.75rem;
+}
+
+.form-control:focus {
+  color: #cecece;
+  background-color: #4d4c59;
+  border-color: transparent;
+}
+
+.tm-col-email {
+  padding-left: 0;
+}
+
+.tm-btn-submit {
+  background-color: #006599;
+}
+
+.tm-btn-gray {
+  background-color: #494752;
+  color: #e9cc69;
+}
+
+.tm-btn-gray:hover {
+  background-color: #77757d;
+  color: #e9cc69;
+}
+
+.btn {
+  padding: 0.5rem 2.4rem;
+  font-size: 1.2rem;
+  border-radius: 0;
+}
+
+.btn-primary {
+  border-color: transparent;
+}
+
+.btn-primary:hover {
+  background-color: #0e7fb9;
+  border-color: transparent;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 30px;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+.tm-text-highlight {
+  color: #e9cc69;
+}
+.tm-text-highlight:hover {
+  color: red;
+}
+.tm-main-content.tm-footer-relative {
+  flex-direction: column;
+}
+.tm-main-content.tm-footer-relative footer {
+  position: relative;
+  bottom: 0;
+  margin-top: 50px;
+}
+
+.tm-copyright-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 10px 30px;
+
+}
+
+a,
+button {
+  transition: all 0.3s ease;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 991px), (max-width: 440px) {
+  .tm-nav-link {
+    width: 145px;
+    height: 145px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 450px;
+  }
+  .content {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .tm-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .grid {
+    justify-content: flex-end;
+  }
+  .tm-col-email {
+    padding-left: 15px;
+  }
+  .tm-reverse-sm {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 544px) {
+  .tm-main-content {
+    flex-direction: column;
+  }
+  .details__bg {
+    padding: 55px 40px;
+  }
+  .slick-dots li button:before {
+    font-size: 15px;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 419px) {
+  .tm-nav-link {
+    width: 120px;
+    height: 120px;
+  }
+
+  .fa-3x {
+    font-size: 2.2em;
+  }
+}
+
+
+<style>
+/* Floating Social Links */
+
+#fs-links * {
+  box-sizing: border-box; /* Grubość borderów nie będzie dodawana do rozmiaru bloku */
+}
+
+/* Główny kontentr linków - lista ul */
+#fs-links {
+    list-style-type: none; /* usunięcie punktora listy */
+    margin: 0; /* reset marginesów zewnętrznych */
+    padding: 0;  /* reset marginesów wewnętrznych */
+    position: fixed;  /* 'przykleja' linki do okna przegladarki - podczas przewijania strony, linki pozostaną w tym samym miejscu */
+    right: 0; /* odległość linków od prawej krawędzi okna przeglądarki - pozycjonuje slider po prawej stronie */
+    font-size: 0; /* usuwa odstępy pomiędzy elementami listy */
+    top: 25%; /* odległość linków od górnej krawędzi okna przeglądarki */
+}
+
+/* Element listy - li */
+#fs-links li {
+    margin-bottom: 5px; /* zewnętrzny, dolny margines elementu listy - odstępy pomiędzy linkami */
+    position: relative; /* nadaje elementowi listy pozycjonowanie relatywne */
+    right: -200px; /* Pozycjonuje linki (ich część tekstową) poza widocznym obszarem strony -
+                    * tutaj ustawiamy długość linków, jeżeli zmienimy tę wartość,
+                    * trzeba również zmienić width w #fs-links li a
+                    */
+
+    /* Płynne wyjechanie linku */
+    -webkit-transition: all .3s ease; /* prędkość i rodzaj animacji */
+    -o-transition: all .3s ease; /* prędkość i rodzaj animacji */
+    transition: all .3s ease; /* prędkość i rodzaj animacji */
+}
+
+/* Efekt po najechaniu kursorem na link */
+#fs-links li:hover {
+    right: 0; /* Po najechaniu kursorem wskazany link w całości powinien pokazać się w widocznej części okna przeglądarki - raczej nie należy zmieniać */
+}
+
+/* Link właściwy */
+#fs-links li a {
+    font-size: 16px; /* rozmiar czcionki */
+    white-space: nowrap; /* powstrzymuje lamanie tekstu w przypadku, gdy tekst linku jest dluzszy niz szerokosc bloku w ktorym sie znajduje */
+    color: #444; /* kolor czcionki */
+    display: inline-block; /* zmienia sposób wyśeitalania elementu listy */
+    height: 50px; /* wysokość linku */
+    line-height: 50px; /* wysokość lini - pozycjonowanie tekstu linku w pionie - powinien być taki sam jak wysokość linku */
+    border: solid #ddd 1px; /* rodzaj, kolor i grubość obramowania, dla pełnego efektu border w #fs-links li i powinno być takie samo */
+    border-left: none; /* usuwa lewą linię obramowania */
+    width: 200px; /* Długość linków */
+    padding-left: 10px; /* margines wewnętrzny, lewy - odleglosc tekstu od ikony */
+    background: #e9cc69; /* tło pod linkiem */
+}
+
+/* Ikona */
+#fs-links li i {
+    display: inline-block;
+    border: solid #ddd 1px; /* Styl obramowania */
+    border-right: none; /* Usunięcie obramowania z prawej strony */
+    height: 50px; /* Wysokość ikony - najlepiej, aby była równa wysokości linka */
+    line-height: px; /* Wyrównanie wertykalne - powinno być równe wysokości ikony */
+    width: 50px; /* szerokość ikony */
+    text-align: center; /* wyrównanie horyzontalne ikony - środkowanie */
+    font-size: 25px; /* rozmiar ikony */
+    vertical-align: top;
+    font-size: 22px; /* rozmiar ikony */
+    color: #fff; /* kolor ikony */
+    position: relative;
+    border-radius: 50px 0 0 50px; /* Zaokrąglenie kantów ikony z lewej strony */
+    background: #e9cc69; /* Tło ikony */
+}
+
+/* Obramowanie ikony */
+#fs-links li i:after {
+    content: "";
+    display: block;
+    border: solid #ddd 1px;
+    position: absolute;
+    top: 3px; bottom: 3px; left: 3px; right: 3px; /* dzięki temu obramowanie ikony mieści się idealnie w środku */
+    border-radius: 50%; /* przekształca kwadrat w koło */
+    background: #ddd; /* tło koła */
+    z-index: -1; /* ustawia warstwę z tłem koła poniżej ikony */
+}
+
+/* Link: facebook */
+#fs-links-facebook:hover i:after {
+    background: #44629e;
+    border-color: #44629e;
+}
+
+/* Link: insta */
+#fs-links-twitter:hover i:after {
+    background: #b82cce;
+    border-color: #b82cce;
+}
+
+/* Link: maila*/
+#fs-links-google-plus:hover i:after {
+    background: #dd4b39;
+    border-color: #dd4b39;
+}
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+</style>
