@@ -14,7 +14,8 @@ h1 {
 
 #tm-bg {
   position: fixed;
- 
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-image: url(../img/pop-bg.jpg);
